@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        .loading-section{
+  background: #30333A;
+}
+.loading-section ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.flex-section{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-section .item{
+  width: 25%;
+  padding: 30px 20px 50px 20px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.flex-section .item2{
+  width: 50%;
+}
+.flex-section .item4{
+  width: 100%;
+}
+.flex-section .item .name{
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.flex-ct-x{
+  display: flex;
+}
+/* -------------------- 01 -------------------- */
+.strip-loading {text-align: center;}
+.strip-loading li {
+  display: inline-block;
+  border-radius: 3px;
+  width: 6px;
+  height: 30px;
+  background-color: #f66;
+  animation: beat 1s ease-in-out infinite;
+}
+.strip-loading li + li {
+  margin-left: 5px;
+}
+.strip-loading li:nth-child(2) {
+  animation-delay: 200ms;
+}
+.strip-loading li:nth-child(3) {
+  animation-delay: 400ms;
+}
+.strip-loading li:nth-child(4) {
+  animation-delay: 600ms;
+}
+.strip-loading li:nth-child(5) {
+  animation-delay: 800ms;
+}
+.strip-loading li:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes beat {
+	0%,
+	100% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(.5);
+	}
+}
+
+/* -------------------- 02 -------------------- */
+.loading-02{
+  width: 112px;
+  height: 70px;
+  *zoom: 1;
+  margin: 0 auto;
+}
+.loading-02:before,
+.loading-02:after {
+  display: table;
+  content: "";
+}
+.loading-02:after {
+  clear: both;
+}
+
+.loading-02 .finger{
+  float:left;
+  margin:0 2px 0 0;
+  width: 20px;
+  height: 100%;
+}
+.loading-02 .finger-1{
+  animation: finger-1-animation 2s ease-out infinite;
+}
+.loading-02 .finger-1 span{
+  animation: finger-1-animation-span 2s ease-out infinite;
+}
+.loading-02 .finger-1 i{
+  animation: finger-1-animation-i 2s ease-out infinite;
+}
+.loading-02 .finger-2{
+  animation: finger-2-animation 2s ease-out infinite;
+}
+.loading-02 .finger-2 span{
+  animation: finger-2-animation-span 2s ease-out infinite;
+}
+.loading-02 .finger-2 i{
+  animation: finger-2-animation-i 2s ease-out infinite;
+}
+.loading-02 .finger-3{
+  animation: finger-3-animation 2s ease-out infinite;
+}
+.loading-02 .finger-3 span{
+  animation: finger-3-animation-span 2s ease-out infinite;
+}
+.loading-02 .finger-3 i{
+  animation: finger-3-animation-i 2s ease-out infinite;
+}
+.loading-02 .finger-4{
+  animation: finger-4-animation 2s ease-out infinite;
+}
+.loading-02 .finger-4 span{
+  animation: finger-4-animation-span 2s ease-out infinite;
+}
+.loading-02 .finger-4 i{
+  animation: finger-4-animation-i 2s ease-out infinite;
+}
+.loading-02 .finger-item{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  border-radius:6px 6px 8px 8px;
+  background:#f66;
+}
+.loading-02 .finger-item span{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: auto;
+  padding:5px 5px 0 5px;
+}
+.loading-02 .finger-item span:before,
+.loading-02 .finger-item span:after{
+  content:'';
+  position:relative;
+  display:block;
+  margin:0 0 2px 0;
+  width: 100%;
+  height: 2px;
+  background:#30333A;
+}
+.loading-02 .finger-item i{
+  position:absolute;
+  left:3px;
+  bottom:3px;
+  width: 14px;
+  height: 14px;
+  border-radius:10px 10px 7px 7px;
+  background:#30333A;
+}
+.loading-02 .last-finger{
+  position:relative;
+  float:left;
+  width: 24px;
+  height: 100%;
+  overflow:hidden;
+}
+.loading-02 .last-finger-item{
+  position:absolute;
+  right:0;
+  top:32px;
+  width: 110%;
+  height: 20px;
+  border-radius:0 5px 14px 0;
+  background:#f66;
+  animation: finger-5-animation 2s ease-out infinite;
+
+  
+}
+.loading-02 .last-finger-item i{
+  position:absolute;
+  left:0;
+  top:-8px;
+  width: 22px;
+  height: 8px;
+  background:#f66;
+  overflow:hidden;
+}
+.loading-02 .last-finger-item i:after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  width: 34px;
+  height: 20px;
+  border-radius:0 0 15px 15px;
+  background:#30333A;
+}
+
+@keyframes finger-1-animation {
+  0%   {padding:12px 0 5px 0;}
+  20%  {padding:12px 0 5px 0;}
+  29%  {padding:4px 0 24px 0;}
+  35%  {padding:4px 0 24px 0;}
+  41%  {padding:12px 0 5px 0;}
+  100% {padding:12px 0 5px 0;}
+}
+@keyframes finger-1-animation-span {
+  0%   {top:0;}
+  20%  {top:0;}
+  29%  {top:-7px;}
+  35%  {top:-7px;}
+  41%  {top:0;}
+  100% {top:0;}
+}
+@keyframes finger-1-animation-i {
+  0%   {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  20%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  29%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  35%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  41%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  100% {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+}
+
+@keyframes finger-2-animation {
+  0%   {padding:6px 0 2px 0;}
+  24%  {padding:6px 0 2px 0;}
+  33%  {padding:2px 0 16px 0;}
+  39%  {padding:2px 0 16px 0;}
+  45%  {padding:6px 0 2px 0;}
+  100% {padding:6px 0 2px 0;}
+}
+@keyframes finger-2-animation-span {
+  0%   {top:0;}
+  24%  {top:0;}
+  33%  {top:-7px;}
+  39%  {top:-7px;}
+  45%  {top:0;}
+  100% {top:0;}
+}
+@keyframes finger-2-animation-i {
+  0%   {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  24%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  33%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  39%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  45%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  100% {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+}
+
+@keyframes finger-3-animation {
+  0%   {padding:0 0 0 0;}
+  28%  {padding:0 0 0 0;}
+  37%  {padding:0 0 12px 0;}
+  43%  {padding:0 0 12px 0;}
+  49%  {padding:0 0 0 0;}
+  100% {padding:0 0 0 0;}
+}
+@keyframes finger-3-animation-span {
+  0%   {top:0;}
+  28%  {top:0;}
+  37%  {top:-7px;}
+  43%  {top:-7px;}
+  49%  {top:0;}
+  100% {top:0;}
+}
+@keyframes finger-3-animation-i {
+  0%   {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  28%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  37%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  43%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  49%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  100% {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+}
+
+@keyframes finger-4-animation {
+  0%   {padding:8px 0 3px 0;}
+  32%  {padding:8px 0 3px 0;}
+  41%  {padding:4px 0 20px 0;}
+  47%  {padding:4px 0 20px 0;}
+  53%  {padding:8px 0 3px 0;}
+  100% {padding:8px 0 3px 0;}
+}
+@keyframes finger-4-animation-span {
+  0%   {top:0;}
+  32%  {top:0;}
+  41%  {top:-7px;}
+  47%  {top:-7px;}
+  53%  {top:0;}
+  100% {top:0;}
+}
+@keyframes finger-4-animation-i {
+  0%   {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  32%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  41%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  47%  {bottom:8px;height:12px;border-radius:7px 7px 4px 4px;}
+  53%  {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+  100% {bottom:3px;height:14px;border-radius:10px 10px 7px 7px;}
+}
+
+@keyframes finger-5-animation {
+  0%   {top:32px;right:0;border-radius:0 5px 14px 0;transform:rotate(0deg);}
+  34%  {top:32px;right:0;border-radius:0 5px 14px 0;transform:rotate(0deg);}
+  43%  {top:20px;right:2px;border-radius:0 8px 20px 0;transform:rotate(-12deg);}
+  50%  {top:20px;right:2px;border-radius:0 8px 20px 0;transform:rotate(-12deg);}
+  60%  {top:32px;right:0;border-radius:0 5px 14px 0;transform:rotate(0deg);}
+  100% {top:32px;right:0;border-radius:0 5px 14px 0;transform:rotate(0deg);}
+}
+/* -------------------- 03 -------------------- */
+.loading-03{
+  display: inline-block;
+  width: 150px;
+  height: 4px;
+  border-radius: 2px;
+  margin: 0 auto;
+  position: relative;
+  background: #f66;
+  animation: changeBgColor 1.04s ease-in infinite alternate;
+  text-align: left;
+}
+.loading-03 span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f66;
+  position: absolute;
+  margin-top: -7px;
+  margin-left:-8px;
+  animation: changePosition 1.04s ease-in infinite alternate;
+}
+
+@keyframes changeBgColor{
+  0%{
+      background: #f66;
+  }
+  100%{
+      background: rgba(255,102,102, .3);
+  }
+}
+@keyframes changePosition{
+  0%{
+      background: #f66;
+  }
+  100%{
+      margin-left: 142px;
+      background: rgba(255,102,102, .3);
+  }
+}
+/* -------------------- 04 -------------------- */
+.loading-04{
+  width: 150px;
+  height: 15px;
+  margin: 0 auto;
+}
+.loading-04 span{
+  display: inline-block;
+  width: 15px;
+  height: 100%;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #f66;
+  -webkit-animation: load 1.04s ease infinite;
+}
+.loading-04 span:last-child{
+  margin-right: 0px; 
+}
+@-webkit-keyframes load{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+.loading-04 span:nth-child(1){
+  -webkit-animation-delay:0.13s;
+}
+.loading-04 span:nth-child(2){
+  -webkit-animation-delay:0.26s;
+}
+.loading-04 span:nth-child(3){
+  -webkit-animation-delay:0.39s;
+}
+.loading-04 span:nth-child(4){
+  -webkit-animation-delay:0.52s;
+}
+.loading-04 span:nth-child(5){
+  -webkit-animation-delay:0.65s;
+}
+
+/* -------------------- 05 -------------------- */
+.loading-05{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+.loading-05 span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f66;
+  position: absolute;
+  -webkit-animation: load 1.04s ease infinite;
+}
+@-webkit-keyframes load{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0.2;
+  }
+}
+.loading-05 span:nth-child(1){
+  left: 0;
+  top: 50%;
+  margin-top:-8px;
+  -webkit-animation-delay:0.13s;
+}
+.loading-05 span:nth-child(2){
+  left: 14px;
+  top: 14px;
+  -webkit-animation-delay:0.26s;
+}
+.loading-05 span:nth-child(3){
+  left: 50%;
+  top: 0;
+  margin-left: -8px;
+  -webkit-animation-delay:0.39s;
+}
+.loading-05 span:nth-child(4){
+  top: 14px;
+  right:14px;
+  -webkit-animation-delay:0.52s;
+}
+.loading-05 span:nth-child(5){
+  right: 0;
+  top: 50%;
+  margin-top:-8px;
+  -webkit-animation-delay:0.65s;
+}
+.loading-05 span:nth-child(6){
+  right: 14px;
+  bottom:14px;
+  -webkit-animation-delay:0.78s;
+}
+.loading-05 span:nth-child(7){
+  bottom: 0;
+  left: 50%;
+  margin-left: -8px;
+  -webkit-animation-delay:0.91s;
+}
+.loading-05 span:nth-child(8){
+  bottom: 14px;
+  left: 14px;
+  -webkit-animation-delay:1.04s;
+}
+/* -------------------- 06 -------------------- */
+.loading-06{
+  width: 150px;
+  height: 15px;
+  margin: 0 auto;
+}
+.loading-06 span{
+  display: inline-block;
+  width: 15px;
+  height: 100%;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #f66;
+  -webkit-animation: load-06 1.04s ease infinite;
+}
+.loading-06 span:last-child{
+  margin-right: 0px; 
+}
+@-webkit-keyframes load-06{
+  0%{
+      opacity: 1;
+      -webkit-transform: scale(1.3);
+  }
+  100%{
+      opacity: 0.2;
+      -webkit-transform: scale(.3);
+  }
+}
+.loading-06 span:nth-child(1){
+  -webkit-animation-delay:0.13s;
+}
+.loading-06 span:nth-child(2){
+  -webkit-animation-delay:0.26s;
+}
+.loading-06 span:nth-child(3){
+  -webkit-animation-delay:0.39s;
+}
+.loading-06 span:nth-child(4){
+  -webkit-animation-delay:0.52s;
+}
+.loading-06 span:nth-child(5){
+  -webkit-animation-delay:0.65s;
+}
+/* -------------------- 07 -------------------- */
+.loading-07{
+  width: 150px;
+  height: 15px;
+  margin: 0 auto;
+  position: relative;
+}
+.loading-07 span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  border-radius: 50%;
+  background: #f66;
+  -webkit-animation: load-07 1.04s ease-in infinite alternate;
+}
+@-webkit-keyframes load-07{
+  0%{
+      opacity: 1;
+      -webkit-transform: translate(0px);
+  }
+  100%{
+      opacity: 0.2;
+      -webkit-transform: translate(150px);
+  }
+}
+.loading-07 span:nth-child(1){
+  -webkit-animation-delay:0.13s;
+}
+.loading-07 span:nth-child(2){
+  -webkit-animation-delay:0.26s;
+}
+.loading-07 span:nth-child(3){
+  -webkit-animation-delay:0.39s;
+}
+.loading-07 span:nth-child(4){
+  -webkit-animation-delay:0.52s;
+}
+.loading-07 span:nth-child(5){
+  -webkit-animation-delay:0.65s;
+}
+/* -------------------- 08 -------------------- */
+.loading-08{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+.loading-08 span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f66;
+  position: absolute;
+  -webkit-animation: load-08 1.04s ease infinite;
+}
+@-webkit-keyframes load-08{
+  0%{
+      -webkit-transform: scale(1.2);
+      opacity: 1;
+  }
+  100%{
+      -webkit-transform: scale(.3);
+      opacity: 0.5;
+  }
+}
+.loading-08 span:nth-child(1){
+  left: 0;
+  top: 50%;
+  margin-top:-10px;
+  -webkit-animation-delay:0.13s;
+}
+.loading-08 span:nth-child(2){
+  left: 14px;
+  top: 14px;
+  -webkit-animation-delay:0.26s;
+}
+.loading-08 span:nth-child(3){
+  left: 50%;
+  top: 0;
+  margin-left: -10px;
+  -webkit-animation-delay:0.39s;
+}
+.loading-08 span:nth-child(4){
+  top: 14px;
+  right:14px;
+  -webkit-animation-delay:0.52s;
+}
+.loading-08 span:nth-child(5){
+  right: 0;
+  top: 50%;
+  margin-top:-10px;
+  -webkit-animation-delay:0.65s;
+}
+.loading-08 span:nth-child(6){
+  right: 14px;
+  bottom:14px;
+  -webkit-animation-delay:0.78s;
+}
+.loading-08 span:nth-child(7){
+  bottom: 0;
+  left: 50%;
+  margin-left: -10px;
+  -webkit-animation-delay:0.91s;
+}
+.loading-08 span:nth-child(8){
+  bottom: 14px;
+  left: 14px;
+  -webkit-animation-delay:1.04s;
+}
+/* -------------------- 09 -------------------- */
+.line {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #f66;
+}
+.loading-09{
+  height: 50px;
+}
+.loading-09 .line:nth-last-child(1) {animation: load-09 1.5s 1s infinite;}
+.loading-09 .line:nth-last-child(2) {animation: load-09 1.5s .5s infinite;}
+.loading-09 .line:nth-last-child(3) {animation: load-09 1.5s 0s infinite;}
+@keyframes load-09 {
+  0 {height: 15px;}
+  50% {height: 35px;}
+  100% {height: 15px;}
+}
+/* -------------------- 10 -------------------- */
+.loading-10 .line:nth-last-child(1) {animation: load-10 1.5s 1s infinite;}
+.loading-10 .line:nth-last-child(2) {animation: load-10 1.5s .5s infinite;}
+.loading-10 .line:nth-last-child(3) {animation: load-10 1.5s 0s infinite;}
+@keyframes load-10 {
+  0 {width: 15px;}
+  50% {width: 35px;}
+  100% {width: 15px;}
+}
+
+/* -------------------- 11 -------------------- */
+.loading-11 .line:nth-last-child(1) {animation: load-11 .6s .1s linear infinite;}
+.loading-11 .line:nth-last-child(2) {animation: load-11 .6s .2s linear infinite;}
+.loading-11 .line:nth-last-child(3) {animation: load-11 .6s .3s linear infinite;}
+
+@keyframes load-11 {
+  0 {transform: translate(0,0);}
+  50% {transform: translate(0,15px);}
+  100% {transform: translate(0,0);}
+}
+/* -------------------- 12 -------------------- */
+
+.loading-12 {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #16a085;
+  animation: spin 1.7s linear infinite;
+  z-index: 11;
+}
+.loading-12:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  animation: spin-reverse .6s linear infinite;
+}
+
+.loading-12:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+/* -------------------- 13 -------------------- */
+.loading-13 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.loading-13:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #f66;
+  border-color: #f66 transparent #f66 transparent;
+  animation: loading-13-ring 1.2s linear infinite;
+}
+@keyframes loading-13-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* -------------------- 14 -------------------- */
+.loading-14 {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-14 div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #f66;
+  border-radius: 50%;
+  animation: loading-14 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #f66 transparent transparent transparent;
+}
+.loading-14 div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading-14 div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading-14 div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading-14 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* -------------------- 15 -------------------- */
+.loading-15 {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-15 div {
+  animation: loading-15 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.loading-15 div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f66;
+  margin: -4px 0 0 -4px;
+}
+.loading-15 div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.loading-15 div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.loading-15 div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.loading-15 div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.loading-15 div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.loading-15 div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.loading-15 div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.loading-15 div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.loading-15 div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.loading-15 div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.loading-15 div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.loading-15 div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.loading-15 div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.loading-15 div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.loading-15 div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.loading-15 div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes loading-15 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------- 16 -------------------- */
+.loading-16 {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-16 div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f66;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.loading-16 div:nth-child(1) {
+  left: 8px;
+  animation: loading-161 0.6s infinite;
+}
+.loading-16 div:nth-child(2) {
+  left: 8px;
+  animation: loading-162 0.6s infinite;
+}
+.loading-16 div:nth-child(3) {
+  left: 32px;
+  animation: loading-162 0.6s infinite;
+}
+.loading-16 div:nth-child(4) {
+  left: 56px;
+  animation: loading-163 0.6s infinite;
+}
+@keyframes loading-161 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loading-163 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loading-162 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+/* -------------------- 17 -------------------- */
+.loading-17{
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-17 div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f66;
+  animation: loading-17 1.2s linear infinite;
+}
+.loading-17 div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+.loading-17 div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+.loading-17 div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+.loading-17 div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+.loading-17 div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+.loading-17 div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+.loading-17 div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+.loading-17 div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+.loading-17 div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+@keyframes loading-17 {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+/* -------------------- 18 -------------------- */
+.loading-18 {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-18 div {
+  position: absolute;
+  border: 4px solid #f66;
+  opacity: 1;
+  border-radius: 50%;
+  animation: loading-18 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.loading-18 div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes loading-18 {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+/* -------------------- 19 -------------------- */
+.loading-19 {
+  position: relative;
+  line-height: 0;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  color: #f66;
+  margin: 20px auto;
+}
+.loading-19:before {
+  content: '';
+  width: 100%;
+  height: 20%;
+  min-width: 5px;
+  background: #fff;
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  border-radius: 50%;
+  animation: rotate-square-2-shadow .5s linear infinite;
+}
+.loading-19:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #f66;
+  animation: rotate-square-2-animate .5s linear infinite;
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  border-radius: 3px;
+}
+@keyframes rotate-square-2-animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(20%) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(40%) scale(1, .9) rotate(45deg);
+    border-bottom-right-radius: 50%;
+  }
+  75% {
+    transform: translateY(20%) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes rotate-square-2-shadow {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+/* --------------------  -------------------- */
+/* --------------------  -------------------- */
+/* --------------------  -------------------- */
+/* --------------------  -------------------- */
+/* --------------------  -------------------- */
+/* --------------------  -------------------- */
+    </style>
+</head>
+<body>
+    <div class="loading-section">
+        <div class="flex-section">
+          <div class="item">
+            <div>
+              <ul class="strip-loading">
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+              </ul>
+              <p class="name">序号：01</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-02">
+                <div class="finger finger-1">
+                  <div class="finger-item">
+                    <span></span><i></i>
+                  </div>
+                </div>
+                <div class="finger finger-2">
+                  <div class="finger-item">
+                    <span></span><i></i>
+                  </div>
+                </div>
+                <div class="finger finger-3">
+                  <div class="finger-item">
+                    <span></span><i></i>
+                  </div>
+                </div>
+                <div class="finger finger-4">
+                  <div class="finger-item">
+                    <span></span><i></i>
+                  </div>
+                </div>
+                <div class="last-finger">
+                  <div class="last-finger-item"><i></i></div>
+                </div>
+              </div>
+              <p class="name">序号：02</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-03">
+                <span></span>
+              </div>
+              <p class="name">序号：03</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-04">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="name">序号：04</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-05">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="name">序号：05</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-06">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="name">序号：06</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-07">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="name">序号：07</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-08">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="name">序号：08</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-09">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+              </div>
+              <p class="name">序号：09</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-10">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+              </div>
+              <p class="name">序号：10</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-11">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+              </div>
+              <p class="name">序号：11</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-12"></div>
+              <p class="name">序号：12</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-13"></div>
+              <p class="name">序号：13</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-14"><div></div><div></div><div></div><div></div></div>
+              <p class="name">序号：14</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-15"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              <p class="name">序号：15</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-16"><div></div><div></div><div></div><div></div></div>
+              <p class="name">序号：16</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-17"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              <p class="name">序号：17</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-18"><div></div><div></div></div>
+              <p class="name">序号：18</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="loading-19"></div>
+              <p class="name">序号：19</p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+</body>
+</html>
